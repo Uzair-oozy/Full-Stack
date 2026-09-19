@@ -13,7 +13,7 @@ caption {
 }
 
 th {
-    font-size: 0.4em;
+    font-size: 0.8em;
     border: black 1px solid;
     padding-top: 3em;
     font-weight: 545;
@@ -73,7 +73,7 @@ div {
 
 .subject {
     margin: 0;
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -81,23 +81,21 @@ div {
     display: block;
     margin-top: 0;
     margin-bottom: 0.4em;
+    font-size: 1.3em;
 }
 
 .room {
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1.8em;
 }
 
-.lab-content .teacher {
+ .lab-content .teacher {
+    position: relative;
+    right: 3rem;
     align-items: left;
+    font-size: 0.8rem;
+}
+.lab-content .subject {
     font-size: 2em;
-}
-.lab-content .subject {
-    font-size: 1.5em;
     font-weight: normal;
-}
-
-.lab-content .subject {
-    font-weight: normal;
-    font-size: 1.7em;
 }
