@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header class="header">
+        <div class="header__left">
+            <div class="logo">
+                <svg viewBox="0 0 36 36" fill="url(#logo-gradient)" height="40" width="40">
+                    <defs>
+                        <linearGradient x1="50%" x2="50%" y1="97.078%" y2="0%" id="logo-gradient">
+                            <stop offset="0%" stop-color="#0062E0"></stop>
+                            <stop offset="100%" stop-color="#19AFFF"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"></path>
+                    <path fill="white" d="M25 23l.8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"></path>
+                </svg>
+            </div>
+            <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                    <g transform="translate(-448 -544)">
+                        <g>
+                            <path d="M10.743 2.257a6 6 0 1 0-8.486 8.486 6 6 0 0 0 8.486-8.486zm-1.06 7.425a4.5 4.5 0 1 1-6.365-6.364 4.5 4.5 0 0 1 6.364 6.364z" transform="translate(448 544)"></path>
+                            <path d="M10.39 8.75a2.94 2.94 0 0 0-.199.432c-.155.417-.23.849-.172 1.284.055.415.232.794.54 1.103a.75.75 0 0 0 1.112-1.004 .3.3 0 0 1-.018-.018c-.04-.048-.074-.097-.083-.16a1.2 1.2 0 0 1 .076-.546.9.9 0 0 1 .066-.16l2.559 2.559a.75.75 0 0 0 1.06-1.06l-2.559-2.56a.756.756 0 0 0-.16.067c-.283.12-.39.063-.546.076a.3.3 0 0 1-.16-.083.3.3 0 0 1-.018-.018.75.75 0 0 0-1.004 1.111c.31.31.688.486 1.103.54.435.058.867-.016 1.284-.171.14-.053.283-.096.432-.2z" transform="translate(448 544)"></path>
+                        </g>
+                    </g>
+                </svg>
+                <input type="text" placeholder="Search Facebook" class="search-input">
+            </div>
+        </div>
+
+        <nav class="header__center">
+            <a href="#" class="nav-item active" title="Home">
+                <svg viewBox="0 0 28 28" fill="currentColor" height="28" width="28">
+                    <path d="M25.825 12.29C25.824 12.289 25.823 12.288 25.821 12.286L15.027 2.937C14.752 2.675 14.392 2.527 14.013 2.521 13.634 2.527 13.274 2.675 12.999 2.937L2.205 12.286C2.204 12.287 2.202 12.289 2.201 12.29 1.58 12.863 1.575 13.842 2.191 14.421 2.477 14.69 2.862 14.835 3.259 14.826L3.843 14.826 3.843 23.295C3.843 24.567 4.876 25.6 6.148 25.6L10.328 25.6C10.69 25.6 10.982 25.308 10.982 24.946L10.982 19.437C10.982 18.855 11.453 18.384 12.035 18.384L15.991 18.384C16.573 18.384 17.044 18.855 17.044 19.437L17.044 24.946C17.044 25.308 17.336 25.6 17.698 25.6L21.878 25.6C23.15 25.6 24.183 24.567 24.183 23.295L24.183 14.826 24.689 14.826C25.087 14.835 25.474 14.69 25.762 14.42 26.374 13.839 26.369 12.862 25.825 12.29Z"></path>
+                </svg>
+                <span class="nav-tooltip">Home</span>
+            </a>
+            <a href="#" class="nav-item" title="Watch">
+                <svg viewBox="0 0 28 28" fill="currentColor" height="28" width="28">
+                    <path d="M8.75 25.25C8.336 25.25 8 24.914 8 24.5 8 24.086 8.336 23.75 8.75 23.75L19.25 23.75C19.664 23.75 20 24.086 20 24.5 20 24.914 19.664 25.25 19.25 25.25L8.75 25.25ZM17.163 12.846 12.055 15.923C11.591 16.202 11 15.869 11 15.327L11 9.173C11 8.631 11.591 8.298 12.055 8.577L17.163 11.654C17.612 11.924 17.612 12.576 17.163 12.846ZM21.75 20.25C22.992 20.25 24 19.242 24 18L24 6.5C24 5.258 22.992 4.25 21.75 4.25L6.25 4.25C5.008 4.25 4 5.258 4 6.5L4 18C4 19.242 5.008 20.25 6.25 20.25L21.75 20.25ZM21.75 21.75L6.25 21.75C4.179 21.75 2.5 20.071 2.5 18L2.5 6.5C2.5 4.429 4.179 2.75 6.25 2.75L21.75 2.75C23.821 2.75 25.5 4.429 25.5 6.5L25.5 18C25.5 20.071 23.821 21.75 21.75 21.75Z"></path>
+                </svg>
+                <span class="nav-tooltip">Watch</span>
+            </a>
+            <a href="#" class="nav-item" title="Marketplace">
+                <svg viewBox="0 0 28 28" fill="currentColor" height="28" width="28">
+                    <path d="M17.5 23.75 21.75 23.75C22.164 23.75 22.5 23.414 22.5 23L22.5 14 22.531 14C22.364 13.917 22.206 13.815 22.061 13.694L21.66 13.359C21.567 13.283 21.433 13.283 21.34 13.36L20.553 14.001C19.87 14.554 18.878 14.554 18.195 14.001L17.408 13.36C17.315 13.283 17.185 13.283 17.092 13.36L16.305 14.001C15.622 14.554 14.63 14.554 13.947 14.001L13.16 13.36C13.067 13.283 12.933 13.283 12.84 13.36L12.053 14.001C11.37 14.554 10.378 14.554 9.695 14.001L8.908 13.36C8.815 13.283 8.685 13.283 8.592 13.36L7.805 14.001C7.122 14.554 6.13 14.554 5.447 14.001L5.046 13.666C4.901 13.546 4.744 13.444 4.578 13.362L4.5 14 4.5 23C4.5 23.414 4.836 23.75 5.25 23.75L9.5 23.75 9.5 17.5C9.5 16.81 10.06 16.25 10.75 16.25L16.25 16.25C16.94 16.25 17.5 16.81 17.5 17.5L17.5 23.75ZM16 23.75 16 17.75 11 17.75 11 23.75 16 23.75ZM24 14 24 23C24 24.243 22.993 25.25 21.75 25.25L5.25 25.25C4.007 25.25 3 24.243 3 23L3 14 2.894 14C2.298 14 1.838 13.473 1.916 12.882L2.899 5.665C3.04 4.586 3.965 3.75 5.055 3.75L21.945 3.75C23.035 3.75 23.96 4.586 24.101 5.665L25.084 12.882C25.162 13.473 24.702 14 24.106 14L24 14ZM5.174 5.315 4.389 11.558C4.357 11.81 4.476 12.031 4.657 12.165L5.058 12.5C5.286 12.687 5.614 12.687 5.842 12.5L6.629 11.859C7.312 11.306 8.304 11.306 8.987 11.859L9.774 12.5C10.002 12.687 10.33 12.687 10.558 12.5L11.345 11.859C12.028 11.306 13.02 11.306 13.703 11.859L14.49 12.5C14.718 12.687 15.046 12.687 15.274 12.5L16.061 11.859C16.744 11.306 17.736 11.306 18.419 11.859L19.206 12.5C19.434 12.687 19.762 12.687 19.99 12.5L20.391 12.165C20.572 12.031 20.691 11.81 20.659 11.558L19.874 5.315C19.831 4.982 19.547 4.75 19.211 4.75L5.837 4.75C5.501 4.75 5.217 4.982 5.174 5.315Z"></path>
+                </svg>
+                <span class="nav-tooltip">Marketplace</span>
+            </a>
+            <a href="#" class="nav-item" title="Groups">
+                <svg viewBox="0 0 28 28" fill="currentColor" height="28" width="28">
+                    <path d="M 7.5 17C 9.433 17 11 18.567 11 20.5L 11 23.5C 11 24.381 10.381 25 9.5 25L 5.5 25C 4.619 25 4 24.381 4 23.5L 4 20.5C 4 18.567 5.567 17 7.5 17ZM 20.5 17C 22.433 17 24 18.567 24 20.5L 24 23.5C 24 24.381 23.381 25 22.5 25L 18.5 25C 17.619 25 17 24.381 17 23.5L 17 20.5C 17 18.567 18.567 17 20.5 17ZM 14 3C 16.761 3 19 5.239 19 8L 19 10C 19 12.761 16.761 15 14 15 11.239 15 9 12.761 9 10L 9 8C 9 5.239 11.239 3 14 3ZM 7.5 3C 9.433 3 11 4.567 11 6.5L 11 8.5C 11 10.433 9.433 12 7.5 12 5.567 12 4 10.433 4 8.5L 4 6.5C 4 4.567 5.567 3 7.5 3ZM 20.5 3C 22.433 3 24 4.567 24 6.5L 24 8.5C 24 10.433 22.433 12 20.5 12 18.567 12 17 10.433 17 8.5L 17 6.5C 17 4.567 18.567 3 20.5 3ZM 14 17C 16.761 17 19 19.239 19 22L 19 23.5C 19 24.381 18.381 25 17.5 25L 10.5 25C 9.619 25 9 24.381 9 23.5L 9 22C 9 19.239 11.239 17 14 17Z"></path>
+                </svg>
+                <span class="nav-tooltip">Groups</span>
+            </a>
+            <a href="#" class="nav-item" title="Gaming">
+                <svg viewBox="0 0 28 28" fill="currentColor" height="28" width="28">
+                    <path d="M23.5 9.5H17.8584C17.3328 9.5 16.8434 9.2299 16.5646 8.7841L14.5053 5.49997C14.2845 5.14579 13.7155 5.14579 13.4947 5.49997L11.4354 8.7841C11.1566 9.2299 10.6672 9.5 10.1416 9.5H4.5C3.11929 9.5 2 10.6193 2 12V22C2 23.3807 3.11929 24.5 4.5 24.5H23.5C24.8807 24.5 26 23.3807 26 22V12C26 10.6193 24.8807 9.5 23.5 9.5ZM7.5 20.5C5.84315 20.5 4.5 19.1569 4.5 17.5C4.5 15.8431 5.84315 14.5 7.5 14.5C9.15685 14.5 10.5 15.8431 10.5 17.5C10.5 19.1569 9.15685 20.5 7.5 20.5ZM18.6036 20.2035C18.2131 20.594 17.58 20.594 17.1894 20.2035C16.7989 19.813 16.7989 19.1798 17.1894 18.7893L18.4822 17.4965L17.1894 16.2036C16.7989 15.8131 16.7989 15.18 17.1894 14.7894C17.58 14.3989 18.2131 14.3989 18.6036 14.7894L19.8965 16.0823L21.1894 14.7894C21.5799 14.3989 22.2131 14.3989 22.6036 14.7894C22.9941 15.18 22.9941 15.8131 22.6036 16.2036L21.3107 17.4965L22.6036 18.7893C22.9941 19.1798 22.9941 19.813 22.6036 20.2035C22.2131 20.594 21.5799 20.594 21.1894 20.2035L19.8965 18.9107L18.6036 20.2035Z"></path>
+                </svg>
+                <span class="nav-tooltip">Gaming</span>
+            </a>
+        </nav>
+
+        <div class="header__right">
+            <a href="#" class="icon-btn" title="Menu">
+                <svg viewBox="0 0 44 44" width="20" height="20" fill="currentColor">
+                    <circle cx="7" cy="7" r="6"></circle>
+                    <circle cx="22" cy="7" r="6"></circle>
+                    <circle cx="37" cy="7" r="6"></circle>
+                    <circle cx="7" cy="22" r="6"></circle>
+                    <circle cx="22" cy="22" r="6"></circle>
+                    <circle cx="37" cy="22" r="6"></circle>
+                    <circle cx="7" cy="37" r="6"></circle>
+                    <circle cx="22" cy="37" r="6"></circle>
+                    <circle cx="37" cy="37" r="6"></circle>
+                </svg>
+            </a>
+            <a href="#" class="icon-btn" title="Messenger">
+                <svg viewBox="0 0 28 28" width="20" height="20" fill="currentColor">
+                    <path d="M14 2.042c6.76 0 12 4.952 12 11.64S20.76 25.322 14 25.322a13.091 13.091 0 0 1-3.474-.461.956.956 0 0 0-.641.047L7.5 26.057a.96.96 0 0 1-1.348-.849l-.065-2.134a.957.957 0 0 0-.322-.684A11.389 11.389 0 0 1 2 13.682C2 6.994 7.24 2.042 14 2.042ZM6.794 17.086a.57.57 0 0 0 .827.758l3.786-2.874a.722.722 0 0 1 .868 0l2.8 2.1a1.8 1.8 0 0 0 2.6-.481l3.525-5.592a.57.57 0 0 0-.827-.758l-3.786 2.874a.722.722 0 0 1-.868 0l-2.8-2.1a1.8 1.8 0 0 0-2.6.481L6.794 17.086Z"></path>
+                </svg>
+            </a>
+            <a href="#" class="icon-btn" title="Notifications">
+                <svg viewBox="0 0 28 28" width="20" height="20" fill="currentColor">
+                    <path d="M7.847 23.488C9.207 23.488 11.443 23.488 14.249 23.488 15.866 23.488 17.109 24.915 16.907 26.518 16.907 26.518 11.593 26.518 11.593 26.518 11.042 26.518 10.373 26.22 10.029 25.876 9.32 25.166 9.149 24.091 9.547 23.488 7.847 23.488 7.847 23.488 7.847 23.488ZM24.534 20.488C25.088 20.488 25.528 20.928 25.528 21.488 25.528 22.04 25.088 22.488 24.534 22.488L3.532 22.488C2.98 22.488 2.536 22.04 2.536 21.488 2.536 20.928 2.98 20.488 3.532 20.488L4.547 20.488 4.547 13.488C4.547 8.488 8.547 4.488 13.533 4.488 13.759 4.488 13.981 4.498 14.201 4.515 14.773 4.559 15.234 5.036 15.234 5.61 15.234 6.235 14.711 6.722 14.088 6.681 13.906 6.668 13.722 6.662 13.533 6.662 9.743 6.662 6.721 9.688 6.721 13.488L6.721 20.488 21.347 20.488 21.347 13.488C21.347 13.285 21.339 13.085 21.322 12.887 21.264 12.213 21.773 11.623 22.449 11.565 23.123 11.507 23.714 12.015 23.772 12.691 23.8 13.017 23.521 13.252 23.521 13.488L23.521 20.488 24.534 20.488Z"></path>
+                    <circle cx="20" cy="6" r="4.5" fill="#E41E3F"></circle>
+                </svg>
+            </a>
+            <a href="#" class="icon-btn profile-btn" title="Account">
+                <div class="avatar avatar--sm" style="background-image: url('https://i.pravatar.cc/40?img=12')"></div>
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-content">
+
+        <!-- ===== LEFT SIDEBAR ===== -->
+        <aside class="sidebar sidebar--left">
+            <a href="#" class="sidebar-item">
+                <div class="avatar avatar--md" style="background-image: url('https://i.pravatar.cc/40?img=12')"></div>
+                <span>Muhammad Uzair</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <div class="sidebar-icon sidebar-icon--friends">
+                    <svg viewBox="0 0 36 36" width="36" height="36" fill="currentColor">
+                        <path d="M18 4a8 8 0 110 16 8 8 0 010-16zm-5 20a7 7 0 00-7 7 1 1 0 001 1h22a1 1 0 001-1 7 7 0 00-7-7H13z" fill="#1877F2"></path>
+                    </svg>
+                </div>
+                <span>Friends</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <div class="sidebar-icon sidebar-icon--memories">
+                    <svg viewBox="0 0 36 36" width="36" height="36">
+                        <path d="M29 17.28A14.09 14.09 0 0018.43 3.5a14.09 14.09 0 00-14 11.5A11.59 11.59 0 002 21.5a11 11 0 0011 11h10a11 11 0 0011-11 11.59 11.59 0 00-5-6.22z" fill="#F7B928"></path>
+                        <path d="M18 28a7 7 0 01-7-7 1 1 0 011-1h12a1 1 0 011 1 7 7 0 01-7 7z" fill="#1877F2"></path>
+                        <circle cx="13" cy="16" r="2" fill="#1877F2"></circle>
+                        <circle cx="23" cy="16" r="2" fill="#1877F2"></circle>
+                    </svg>
+                </div>
+                <span>Memories</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <svg viewBox="0 0 36 36" width="36" height="36">
+                        <path d="M18.5 2a3.5 3.5 0 013.5 3.5v9a3.5 3.5 0 01-7 0v-9A3.5 3.5 0 0118.5 2z" fill="#F3425F"></path>
+                        <path d="M18.5 2a3.5 3.5 0 013.5 3.5v9a3.5 3.5 0 01-7 0v-9A3.5 3.5 0 0118.5 2z" fill="#F3425F" opacity=".5"></path>
+                        <rect x="3" y="18" width="30" height="14" rx="3" fill="#1877F2"></rect>
+                        <path d="M7 18h22v6a8 8 0 01-8 8H15a8 8 0 01-8-8v-6z" fill="#1877F2"></path>
+                    </svg>
+                </div>
+                <span>Saved</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <svg viewBox="0 0 36 36" width="36" height="36">
+                        <path d="M9.5 7.5h17a2 2 0 012 2V27a2 2 0 01-2 2h-17a2 2 0 01-2-2V9.5a2 2 0 012-2z" fill="#1877F2"></path>
+                        <path d="M12 15h12M12 19h8M12 23h10" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M18 3l4 4.5H14L18 3z" fill="#42B72A"></path>
+                    </svg>
+                </div>
+                <span>Pages</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <svg viewBox="0 0 36 36" width="36" height="36">
+                        <path fill="#FF6D00" d="M18 2C9.163 2 2 9.163 2 18s7.163 16 16 16 16-7.163 16-16S26.837 2 18 2z"></path>
+                        <path fill="#fff" d="M12 15.5v7l6-3.5-6-3.5z"></path>
+                        <path fill="#fff" d="M18 14v8.5l6-4.25L18 14z"></path>
+                    </svg>
+                </div>
+                <span>Video</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <svg viewBox="0 0 36 36" width="36" height="36">
+                        <rect x="4" y="4" width="28" height="28" rx="5" fill="#E44032"></rect>
+                        <path d="M18 10a6 6 0 016 6c0 4.5-6 10-6 10s-6-5.5-6-10a6 6 0 016-6z" fill="#fff"></path>
+                        <circle cx="18" cy="16" r="2.5" fill="#E44032"></circle>
+                    </svg>
+                </div>
+                <span>Events</span>
+            </a>
+            <a href="#" class="sidebar-item sidebar-item--more">
+                <div class="sidebar-icon sidebar-icon--more">
+                    <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+                        <path d="M10 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-5.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"></path>
+                    </svg>
+                </div>
+                <span>See more</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <h3 class="sidebar-heading">Your Shortcuts</h3>
+            <a href="#" class="sidebar-item">
+                <div class="avatar avatar--md avatar--rounded" style="background-image: url('https://picsum.photos/seed/group1/40/40')"></div>
+                <span>Web Dev Community</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <div class="avatar avatar--md avatar--rounded" style="background-image: url('https://picsum.photos/seed/group2/40/40')"></div>
+                <span>FAST NUCES '27</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <div class="avatar avatar--md avatar--rounded" style="background-image: url('https://picsum.photos/seed/group3/40/40')"></div>
+                <span>Full Stack Projects</span>
+            </a>
+        </aside>
+
+        <!-- ===== FEED (CENTER) ===== -->
+        <section class="feed">
+
+            <!-- Stories -->
+            <div class="stories">
+                <div class="story story--create">
+                    <div class="story__image" style="background-image: url('https://picsum.photos/seed/me/200/300')"></div>
+                    <div class="story__create-icon">
+                        <svg viewBox="0 0 20 20" width="20" height="20" fill="#fff">
+                            <path d="M10 4.5a.75.75 0 01.75.75v4h4a.75.75 0 010 1.5h-4v4a.75.75 0 01-1.5 0v-4h-4a.75.75 0 010-1.5h4v-4A.75.75 0 0110 4.5z"></path>
+                        </svg>
+                    </div>
+                    <span class="story__label">Create Story</span>
+                </div>
+                <div class="story">
+                    <div class="story__image" style="background-image: url('https://picsum.photos/seed/story1/200/300')"></div>
+                    <div class="story__avatar" style="background-image: url('https://i.pravatar.cc/40?img=1')"></div>
+                    <span class="story__label">Ahmed Ali</span>
+                </div>
+                <div class="story">
+                    <div class="story__image" style="background-image: url('https://picsum.photos/seed/story2/200/300')"></div>
+                    <div class="story__avatar" style="background-image: url('https://i.pravatar.cc/40?img=5')"></div>
+                    <span class="story__label">Sara Khan</span>
+                </div>
+                <div class="story">
+                    <div class="story__image" style="background-image: url('https://picsum.photos/seed/story3/200/300')"></div>
+                    <div class="story__avatar" style="background-image: url('https://i.pravatar.cc/40?img=8')"></div>
+                    <span class="story__label">Bilal Sheikh</span>
+                </div>
+                <div class="story">
+                    <div class="story__image" style="background-image: url('https://picsum.photos/seed/story4/200/300')"></div>
+                    <div class="story__avatar" style="background-image: url('https://i.pravatar.cc/40?img=15')"></div>
+                    <span class="story__label">Fatima Noor</span>
+                </div>
+            </div>
+
+            <!-- Post Composer -->
+            <div class="card composer">
+                <div class="composer__top">
+                    <div class="avatar avatar--md" style="background-image: url('https://i.pravatar.cc/40?img=12')"></div>
+                    <button class="composer__input">What's on your mind, Uzair?</button>
+                </div>
+                <div class="composer__divider"></div>
+                <div class="composer__actions">
+                    <button class="composer__action">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="#F3425F">
+                            <path d="M15.214 2C18.717 2 21.477 4.711 22 8.136V15.864C21.477 19.289 18.717 22 15.214 22H8.786C5.283 22 2.523 19.289 2 15.864V8.136C2.523 4.711 5.283 2 8.786 2H15.214ZM12 6.5A5.5 5.5 0 006.5 12 5.5 5.5 0 0012 17.5 5.5 5.5 0 0017.5 12 5.5 5.5 0 0012 6.5ZM12 8.5A3.5 3.5 0 0115.5 12 3.5 3.5 0 0112 15.5 3.5 3.5 0 018.5 12 3.5 3.5 0 0112 8.5Z"></path>
+                        </svg>
+                        <span>Live video</span>
+                    </button>
+                    <button class="composer__action">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="#45BD62">
+                            <path d="M19 3H5C3.895 3 3 3.895 3 5V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V5C21 3.895 20.105 3 19 3ZM7.5 16.5L10 12.5L12.5 16H15L11 10L7.5 16.5ZM17.5 16.5H16V18H14.5V16.5H13V15H14.5V13.5H16V15H17.5V16.5Z"></path>
+                        </svg>
+                        <span>Photo/video</span>
+                    </button>
+                    <button class="composer__action">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="#F7B928">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8.5 14.5C9.5 16 10.5 17 12 17s2.5-1 3.5-2.5" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+                            <circle cx="9" cy="10" r="1.25" fill="#fff"></circle>
+                            <circle cx="15" cy="10" r="1.25" fill="#fff"></circle>
+                        </svg>
+                        <span>Feeling/activity</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Post 1 -->
+            <article class="card post">
+                <div class="post__header">
+                    <div class="avatar avatar--md" style="background-image: url('https://i.pravatar.cc/40?img=3')"></div>
+                    <div class="post__meta">
+                        <a href="#" class="post__author">Ahmad Hassan</a>
+                        <span class="post__time">2 hours ago · <svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 8.5a.5.5 0 01-.5.5H8a.5.5 0 01-.5-.5V5a.5.5 0 011 0v3h3a.5.5 0 01.5.5z"></path></svg></span>
+                    </div>
+                    <button class="post__options">
+                        <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zm0 6a2 2 0 110-4 2 2 0 010 4zm0 6a2 2 0 110-4 2 2 0 010 4z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="post__content">
+                    <p>Just finished building my first full-stack application using React and Node.js! 🚀 The journey from learning HTML/CSS to deploying a complete web app has been incredible. Keep pushing, fellow devs! 💻✨</p>
+                </div>
+                <div class="post__image">
+                    <img src="https://picsum.photos/seed/code1/600/400" alt="Code project screenshot" loading="lazy">
+                </div>
+                <div class="post__stats">
+                    <div class="post__reactions">
+                        <span class="reaction-icons">
+                            <span class="reaction reaction--like">👍</span>
+                            <span class="reaction reaction--love">❤️</span>
+                            <span class="reaction reaction--wow">😮</span>
+                        </span>
+                        <span class="reaction-count">Ahmed, Sara and 142 others</span>
+                    </div>
+                    <div class="post__comment-count">
+                        <span>32 comments</span>
+                        <span>12 shares</span>
+                    </div>
+                </div>
+                <div class="post__divider"></div>
+                <div class="post__actions">
+                    <button class="post__action-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M15.653 3.015A10.003 10.003 0 002.003 11.5a1 1 0 001.998.061A8.004 8.004 0 0115.7 5.011l-.252.252A1 1 0 0016.155 6.7l2.199-2.2a1 1 0 000-1.413L16.155.887A1 1 0 0014.74 2.3l.913.714zM8.347 20.985A10.003 10.003 0 0021.997 12.5a1 1 0 00-1.998-.061A8.004 8.004 0 018.3 18.989l.252-.252a1 1 0 00-.707-1.437l-2.199 2.2a1 1 0 000 1.413l2.199 2.2a1 1 0 001.414-1.414l-.912-.714z"></path>
+                        </svg>
+                        <span>Like</span>
+                    </button>
+                    <button class="post__action-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12 2C6.477 2 2 6.026 2 11c0 2.584 1.2 4.928 3.152 6.605.1.087.16.213.156.347l-.094 2.852c-.03.888.968 1.468 1.747 1.022l3.185-1.824a.49.49 0 01.366-.05c.488.133.99.214 1.488.27A10.003 10.003 0 0012 20c5.523 0 10-4.026 10-9s-4.477-9-10-9z"></path>
+                        </svg>
+                        <span>Comment</span>
+                    </button>
+                    <button class="post__action-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm3.41 12.41L12 17.83l-3.41-3.42a.996.996 0 111.41-1.41L12 15l2-2a.996.996 0 111.41 1.41z"></path>
+                        </svg>
+                        <span>Share</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="card post">
+                <div class="post__header">
+                    <div class="avatar avatar--md" style="background-image: url('https://i.pravatar.cc/40?img=5')"></div>
+                    <div class="post__meta">
+                        <a href="#" class="post__author">Sara Khan</a>
+                        <span class="post__time">5 hours ago · <svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 8.5a.5.5 0 01-.5.5H8a.5.5 0 01-.5-.5V5a.5.5 0 011 0v3h3a.5.5 0 01.5.5z"></path></svg></span>
+                    </div>
+                    <button class="post__options">
+                        <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zm0 6a2 2 0 110-4 2 2 0 010 4zm0 6a2 2 0 110-4 2 2 0 010 4z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="post__content">
+                    <p>Beautiful sunset views from the hiking trail today! 🌄 Sometimes you need to disconnect from code and reconnect with nature. Who else loves outdoor adventures? 🏔️</p>
+                </div>
+                <div class="post__image">
+                    <img src="https://picsum.photos/seed/sunset77/600/400" alt="Sunset hiking trail" loading="lazy">
+                </div>
+                <div class="post__stats">
+                    <div class="post__reactions">
+                        <span class="reaction-icons">
+                            <span class="reaction reaction--love">❤️</span>
+                            <span class="reaction reaction--like">👍</span>
+                        </span>
+                        <span class="reaction-count">You, Bilal and 89 others</span>
+                    </div>
+                    <div class="post__comment-count">
+                        <span>18 comments</span>
+                        <span>5 shares</span>
+                    </div>
+                </div>
+                <div class="post__divider"></div>
+                <div class="post__actions">
+                    <button class="post__action-btn post__action-btn--liked">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M15.653 3.015A10.003 10.003 0 002.003 11.5a1 1 0 001.998.061A8.004 8.004 0 0115.7 5.011l-.252.252A1 1 0 0016.155 6.7l2.199-2.2a1 1 0 000-1.413L16.155.887A1 1 0 0014.74 2.3l.913.714z"></path>
+                        </svg>
+                        <span>Like</span>
+                    </button>
+                    <button class="post__action-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12 2C6.477 2 2 6.026 2 11c0 2.584 1.2 4.928 3.152 6.605.1.087.16.213.156.347l-.094 2.852c-.03.888.968 1.468 1.747 1.022l3.185-1.824a.49.49 0 01.366-.05c.488.133.99.214 1.488.27A10.003 10.003 0 0012 20c5.523 0 10-4.026 10-9s-4.477-9-10-9z"></path>
+                        </svg>
+                        <span>Comment</span>
+                    </button>
+                    <button class="post__action-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm3.41 12.41L12 17.83l-3.41-3.42a.996.996 0 111.41-1.41L12 15l2-2a.996.996 0 111.41 1.41z"></path>
+                        </svg>
+                        <span>Share</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="card post">
+                <div class="post__header">
+                    <div class="avatar avatar--md" style="background-image: url('https://i.pravatar.cc/40?img=8')"></div>
+                    <div class="post__meta">
+                        <a href="#" class="post__author">Bilal Sheikh</a>
+                        <span class="post__time">Yesterday at 9:15 PM · <svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 8.5a.5.5 0 01-.5.5H8a.5.5 0 01-.5-.5V5a.5.5 0 011 0v3h3a.5.5 0 01.5.5z"></path></svg></span>
+                    </div>
+                    <button class="post__options">
+                        <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zm0 6a2 2 0 110-4 2 2 0 010 4zm0 6a2 2 0 110-4 2 2 0 010 4z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="post__content">
+                    <p>📢 Big announcement! Our university hackathon registration is now open! 48 hours of coding, mentorship from industry pros, and prizes worth $5000! Register now at the link below 👇</p>
+                    <p class="post__link-text">#Hackathon2026 #Coding #TechEvent</p>
+                </div>
+                <div class="post__stats">
+                    <div class="post__reactions">
+                        <span class="reaction-icons">
+                            <span class="reaction reaction--like">👍</span>
+                            <span class="reaction reaction--wow">😮</span>
+                            <span class="reaction reaction--love">❤️</span>
+                        </span>
+                        <span class="reaction-count">256</span>
+                    </div>
+                    <div class="post__comment-count">
+                        <span>45 comments</span>
+                        <span>78 shares</span>
+                    </div>
+                </div>
+                <div class="post__divider"></div>
+                <div class="post__actions">
+                    <button class="post__action-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M15.653 3.015A10.003 10.003 0 002.003 11.5a1 1 0 001.998.061A8.004 8.004 0 0115.7 5.011l-.252.252A1 1 0 0016.155 6.7l2.199-2.2a1 1 0 000-1.413L16.155.887A1 1 0 0014.74 2.3l.913.714z"></path>
+                        </svg>
+                        <span>Like</span>
+                    </button>
+                    <button class="post__action-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12 2C6.477 2 2 6.026 2 11c0 2.584 1.2 4.928 3.152 6.605.1.087.16.213.156.347l-.094 2.852c-.03.888.968 1.468 1.747 1.022l3.185-1.824a.49.49 0 01.366-.05c.488.133.99.214 1.488.27A10.003 10.003 0 0012 20c5.523 0 10-4.026 10-9s-4.477-9-10-9z"></path>
+                        </svg>
+                        <span>Comment</span>
+                    </button>
+                    <button class="post__action-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm3.41 12.41L12 17.83l-3.41-3.42a.996.996 0 111.41-1.41L12 15l2-2a.996.996 0 111.41 1.41z"></path>
+                        </svg>
+                        <span>Share</span>
+                    </button>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- ===== RIGHT SIDEBAR ===== -->
+        <aside class="sidebar sidebar--right">
+
+            <!-- Sponsored -->
+            <div class="right-section">
+                <h3 class="right-heading">Sponsored</h3>
+                <a href="#" class="sponsored-item">
+                    <div class="sponsored-img" style="background-image: url('https://picsum.photos/seed/ad1/130/130')"></div>
+                    <div class="sponsored-info">
+                        <span class="sponsored-title">Learn Full-Stack Dev</span>
+                        <span class="sponsored-link">codecamp.io</span>
+                    </div>
+                </a>
+                <a href="#" class="sponsored-item">
+                    <div class="sponsored-img" style="background-image: url('https://picsum.photos/seed/ad2/130/130')"></div>
+                    <div class="sponsored-info">
+                        <span class="sponsored-title">Premium Laptops Sale</span>
+                        <span class="sponsored-link">techdeals.pk</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="right-divider"></div>
+
+            <!-- Birthday -->
+            <div class="right-section">
+                <h3 class="right-heading">Birthdays</h3>
+                <div class="birthday-item">
+                    <svg viewBox="0 0 24 24" width="36" height="36">
+                        <rect x="2" y="10" width="20" height="12" rx="2" fill="#E8C549"></rect>
+                        <path d="M2 14h20" stroke="#D4A843" stroke-width="1"></path>
+                        <path d="M2 18h20" stroke="#D4A843" stroke-width="1"></path>
+                        <rect x="5" y="7" width="14" height="6" rx="2" fill="#FF6D73"></rect>
+                        <path d="M12 2v5" stroke="#FFB6C1" stroke-width="2" stroke-linecap="round"></path>
+                        <circle cx="12" cy="2" r="1.5" fill="#FF9800"></circle>
+                    </svg>
+                    <span><strong>Hamza Raza</strong> and <strong>2 others</strong> have birthdays today.</span>
+                </div>
+            </div>
+
+            <div class="right-divider"></div>
+
+            <!-- Contacts -->
+            <div class="right-section">
+                <div class="contacts-header">
+                    <h3 class="right-heading">Contacts</h3>
+                    <div class="contacts-actions">
+                        <button class="contacts-action-btn" title="New Room">
+                            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                                <path d="M1.5 7.5a6 6 0 0112 0v4.117a1.5 1.5 0 01-.833 1.342l-2.06 1.03A1.5 1.5 0 019.266 14H6.734a1.5 1.5 0 01-1.341-.012l-2.06-1.03A1.5 1.5 0 012.5 11.617V7.5zM7.5 2A5.5 5.5 0 002 7.5v4.117a1 1 0 00.555.894l2.06 1.03a1 1 0 00.894.008L7.5 12.5h1l1.99 1.049a1 1 0 00.895-.008l2.06-1.03a1 1 0 00.555-.894V7.5A5.5 5.5 0 007.5 2z"></path>
+                            </svg>
+                        </button>
+                        <button class="contacts-action-btn" title="Search">
+                            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                                <path d="M10.743 2.257a6 6 0 1 0-8.486 8.486 6 6 0 0 0 8.486-8.486zm-1.06 7.425a4.5 4.5 0 1 1-6.365-6.364 4.5 4.5 0 0 1 6.364 6.364z"></path>
+                            </svg>
+                        </button>
+                        <button class="contacts-action-btn" title="Options">
+                            <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+                                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zm0 6a2 2 0 110-4 2 2 0 010 4zm0 6a2 2 0 110-4 2 2 0 010 4z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <a href="#" class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar--sm" style="background-image: url('https://i.pravatar.cc/36?img=1')"></div>
+                        <span class="online-dot"></span>
+                    </div>
+                    <span>Ahmed Ali</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar--sm" style="background-image: url('https://i.pravatar.cc/36?img=5')"></div>
+                        <span class="online-dot"></span>
+                    </div>
+                    <span>Sara Khan</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar--sm" style="background-image: url('https://i.pravatar.cc/36?img=8')"></div>
+                        <span class="online-dot"></span>
+                    </div>
+                    <span>Bilal Sheikh</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar--sm" style="background-image: url('https://i.pravatar.cc/36?img=15')"></div>
+                    </div>
+                    <span>Fatima Noor</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar--sm" style="background-image: url('https://i.pravatar.cc/36?img=20')"></div>
+                        <span class="online-dot"></span>
+                    </div>
+                    <span>Hamza Raza</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar--sm" style="background-image: url('https://i.pravatar.cc/36?img=25')"></div>
+                    </div>
+                    <span>Zainab Malik</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar--sm" style="background-image: url('https://i.pravatar.cc/36?img=30')"></div>
+                        <span class="online-dot"></span>
+                    </div>
+                    <span>Usman Tariq</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar--sm" style="background-image: url('https://i.pravatar.cc/36?img=33')"></div>
+                    </div>
+                    <span>Ayesha Iqbal</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar--sm" style="background-image: url('https://i.pravatar.cc/36?img=38')"></div>
+                        <span class="online-dot"></span>
+                    </div>
+                    <span>Ali Hassan</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar--sm" style="background-image: url('https://i.pravatar.cc/36?img=42')"></div>
+                    </div>
+                    <span>Mariam Shah</span>
+                </a>
+            </div>
+
+            <!-- Group Conversations -->
+            <div class="right-divider"></div>
+            <div class="right-section">
+                <h3 class="right-heading">Group conversations</h3>
+                <a href="#" class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar--sm avatar--group">
+                            <span>+</span>
+                        </div>
+                    </div>
+                    <span>Create new group</span>
+                </a>
+            </div>
+        </aside>
+
+    </main>
+
+</body>
+</html>
