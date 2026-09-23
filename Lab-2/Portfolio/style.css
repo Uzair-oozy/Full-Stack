@@ -20,6 +20,11 @@
     max-width: 960px;
     margin: auto;
   }
+
+  nav {
+    position: sticky;
+    top: 0;
+  }
   
   .navbar {
     display: flex;
