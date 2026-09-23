@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A clean IEEE conference paper template built with HTML and CSS.">
+	<title>IEEE Paper Template</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Baskerville:wght@400;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="header-inner">
+			<a class="brand" href="#top" aria-label="IEEE paper template home"><span class="brand-mark">IEEE</span><span class="brand-copy"><strong>Paperwork</strong><small>conference template</small></span></a>
+			<div class="header-actions"><span class="status-dot"><i></i> Draft workspace</span><a class="outline-button" href="#top">Paper view <span aria-hidden="true">↗</span></a></div>
+		</div>
+	</header>
+
+	<main id="top" class="workspace">
+		<aside class="side-panel" aria-label="Paper navigation">
+			<div class="eyebrow">MANUSCRIPT / 001</div>
+			<h1>Structure your<br><em>next paper.</em></h1>
+			<p class="side-intro">A focused IEEE conference layout for clear technical storytelling.</p>
+			<nav class="paper-nav"><a class="active" href="#abstract"><span>01</span> Abstract</a><a href="#introduction"><span>02</span> Introduction</a><a href="#methodology"><span>03</span> Methodology</a><a href="#results"><span>04</span> Results</a><a href="#conclusion"><span>05</span> Conclusion</a><a href="#references"><span>06</span> References</a></nav>
+			<div class="side-note"><span class="note-label">QUICK NOTE</span><p>Replace the sample copy with your research. Keep section headings concise and citations consistent.</p></div>
+		</aside>
+
+		<article class="paper" aria-label="IEEE conference paper">
+			<div class="paper-topline"><span>IEEE CONFERENCE PAPER</span><span>VOL. 01 / 2025</span></div>
+			<header class="paper-header">
+				<div class="paper-kicker">Research article · Computer science</div>
+				<h2>A Practical Framework for Human-Centered<br class="desktop-break"> Intelligent Systems</h2>
+				<p class="subtitle">Designing reliable interfaces at the intersection of computation, context, and care</p>
+				<div class="authors"><div><strong>Alex Morgan</strong><span>Department of Computer Science<br>Northbridge University</span></div><div><strong>Priya Shah</strong><span>School of Information Technology<br>Northbridge University</span></div><div><strong>Jordan Lee</strong><span>Research &amp; Innovation Lab<br>Northbridge University</span></div></div>
+				<div class="paper-meta"><span>Received 08 January 2025</span><span>Revised 21 March 2025</span><span>DOI: 10.1109/EXAMPLE.2025.00001</span></div>
+			</header>
+
+			<section id="abstract" class="abstract-block"><h3>Abstract</h3><p>Intelligent systems increasingly mediate decisions that affect everyday life, yet many are evaluated primarily through technical performance. This paper presents a practical framework for designing human-centered intelligent systems that balance accuracy, transparency, and user agency. Through a mixed-method evaluation of three prototype interfaces, we identify four design principles that improve comprehension without adding operational friction. The findings suggest that modest changes in feedback timing, explanation granularity, and control placement can produce meaningful gains in trust and task completion.</p><p class="keywords"><strong>Index Terms—</strong> human-centered computing, intelligent systems, interface design, explainable artificial intelligence, user trust.</p></section>
+
+			<div class="paper-columns">
+				<div class="column">
+					<section id="introduction"><h3><span>I.</span> Introduction</h3><p>Technical systems are no longer passive tools. They recommend, classify, prioritize, and increasingly act on behalf of their users. This shift creates a design challenge: a system may be statistically effective while remaining difficult to understand or contest.</p><p>Human-centered design offers a useful lens for this challenge, but its principles are often stated at a level too general to guide implementation. This work translates those principles into a compact set of interface decisions that can be evaluated in a working prototype.</p><p>Our contributions are threefold:</p><ol class="contributions"><li>A framework connecting system behavior to visible user controls.</li><li>An evaluation protocol for measuring comprehension and agency.</li><li>Design recommendations grounded in observed interaction patterns.</li></ol></section>
+					<section id="methodology"><h3><span>II.</span> Methodology</h3><p>We developed three task-oriented prototypes that varied in explanation depth and control visibility. Twenty-four participants completed a recommendation task and a correction task in a counterbalanced study design.</p><div class="equation" role="img" aria-label="Trust score equals accuracy times transparency divided by interaction cost"><span>T<sub>s</sub> =</span><span class="fraction"><i>A × X</i><i>C<sub>i</sub></i></span><span class="equation-number">(1)</span></div><p>Here, <i>T<sub>s</sub></i> denotes perceived trust, <i>A</i> represents task accuracy, <i>X</i> represents explanation transparency, and <i>C<sub>i</sub></i> is the interaction cost required to inspect or correct a result.</p><figure class="diagram"><div class="diagram-label">USER-CENTERED SYSTEM LOOP</div><div class="flow"><span>Input</span><b>→</b><span>Inference</span><b>→</b><span>Explanation</span><b>→</b><span>Action</span></div><figcaption>Fig. 1. The proposed interaction loop keeps system output and user control visible in the same decision context.</figcaption></figure></section>
+				</div>
+				<div class="column">
+					<section id="results"><h3><span>III.</span> Results and Discussion</h3><p>Participants completed tasks faster when explanations were available at the point of decision rather than in a separate help view. The effect was strongest for unfamiliar recommendations, where participants used the correction control as a signal that the system could be challenged.</p><div class="table-wrap"><table><caption>TABLE I<br><span>SUMMARY OF EVALUATION MEASURES</span></caption><thead><tr><th>Condition</th><th>Accuracy</th><th>Time (s)</th><th>Trust</th></tr></thead><tbody><tr><td>Baseline</td><td>78.2%</td><td>42.8</td><td>3.1</td></tr><tr><td>Visible control</td><td>81.5%</td><td>39.4</td><td>3.8</td></tr><tr><td>Full framework</td><td><strong>86.7%</strong></td><td><strong>34.6</strong></td><td><strong>4.3</strong></td></tr></tbody></table></div><p>The full framework improved all measured outcomes relative to the baseline. Qualitative responses indicate that participants did not seek more information in general; they sought the <em>right information at the right moment</em>.</p><blockquote>“The system felt more useful when I could see why it made a choice and what I could do about it.”<cite>— Participant 17</cite></blockquote></section>
+					<section id="conclusion"><h3><span>IV.</span> Conclusion</h3><p>This paper presented a practical framework for human-centered intelligent systems. The results reinforce a simple premise: user agency is an interface property, not merely a policy statement. Future work will test the framework in high-stakes domains and examine how explanations should adapt to expertise over time.</p></section>
+					<section id="references" class="references"><h3><span>V.</span> References</h3><ol><li>A. Author and B. Researcher, “Designing for meaningful human control,” <em>IEEE Trans. Human-Mach. Syst.</em>, vol. 52, no. 4, pp. 201–214, 2022.</li><li>C. Chen, “Explanation interfaces for intelligent recommendations,” in <em>Proc. CHI Conf.</em>, 2023, pp. 1–12.</li><li>D. Norman, <em>The Design of Everyday Things</em>, rev. ed. New York, NY, USA: Basic Books, 2013.</li></ol></section>
+				</div>
+			</div>
+			<footer class="paper-footer"><span>© 2025 Northbridge University</span><span>IEEE PAPERWORK · <strong>01</strong></span></footer>
+		</article>
+	</main>
+</body>
+</html>
