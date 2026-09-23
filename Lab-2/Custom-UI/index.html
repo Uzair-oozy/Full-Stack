@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Northstar Logistics operations dashboard.">
+  <title>Northstar Logistics | Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="Northstar Logistics home">
+        <span class="brand-icon">N</span>
+        <span><strong>northstar</strong><small>logistics / ops</small></span>
+      </a>
+
+      <div class="workspace-switcher">
+        <span class="workspace-avatar">AC</span>
+        <span><strong>ACME Retail</strong><small>Global account</small></span>
+        <span class="chevron">⌄</span>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <p class="nav-label">Workspace</p>
+        <a class="nav-link active" href="#overview"><span class="nav-icon">◈</span> Overview <b>⌘1</b></a>
+        <a class="nav-link" href="#shipments"><span class="nav-icon">▣</span> Shipments <b>24</b></a>
+        <a class="nav-link" href="#routes"><span class="nav-icon">⌁</span> Routes <b></b></a>
+        <a class="nav-link" href="#fleet"><span class="nav-icon">▤</span> Fleet <b></b></a>
+        <a class="nav-link" href="#reports"><span class="nav-icon">▥</span> Reports <b></b></a>
+        <p class="nav-label secondary-label">Manage</p>
+        <a class="nav-link" href="#customers"><span class="nav-icon">◎</span> Customers <b></b></a>
+        <a class="nav-link" href="#settings"><span class="nav-icon">⚙</span> Settings <b></b></a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="support-card"><span class="support-pulse"></span><div><strong>Control tower online</strong><small>All systems operational</small></div></div>
+        <a class="profile-link" href="#profile"><span class="profile-avatar">AM</span><span><strong>Alex Morgan</strong><small>Operations lead</small></span><span class="more">•••</span></a>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong>Overview</strong></div>
+        <div class="topbar-actions"><span class="sync-status"><i></i> Synced 2 min ago</span><button class="icon-button" aria-label="Notifications">♧<em>3</em></button><button class="profile-mini" aria-label="Open profile">AM</button></div>
+      </header>
+
+      <div class="content-wrap">
+        <section class="welcome-row">
+          <div><p class="section-kicker">TUESDAY, 23 SEPTEMBER 2026</p><h1>Good morning, Mr. Obiad Ullah Khan <span>✦</span></h1><p class="page-intro">Here is the pulse of your network. You have <strong>3 shipments</strong> that need attention today.</p></div>
+          <div class="header-buttons"><a class="button secondary-button" href="#reports"><span>↓</span> Export report</a><a class="button primary-button" href="#new-shipment"><span>+</span> New shipment</a></div>
+        </section>
+
+        <section class="metric-grid" aria-label="Network summary">
+          <article class="metric-card metric-highlight"><div class="metric-heading"><span class="metric-icon">↗</span><span class="metric-change positive">+8.2%</span></div><p>On-time delivery</p><strong>94.8<span>%</span></strong><div class="sparkline"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>vs. 92.1% last month</small></article>
+          <article class="metric-card"><div class="metric-heading"><span class="metric-icon blue-icon">◫</span><span class="metric-change positive">+12.4%</span></div><p>Active shipments</p><strong>128</strong><div class="metric-bar"><i style="width: 72%"></i></div><small>92 in transit · 36 processing</small></article>
+          <article class="metric-card"><div class="metric-heading"><span class="metric-icon orange-icon">◷</span><span class="metric-change negative">-4.1%</span></div><p>Avg. transit time</p><strong>3.6 <span>days</span></strong><div class="metric-bar orange-bar"><i style="width: 58%"></i></div><small>0.4 days faster than target</small></article>
+          <article class="metric-card"><div class="metric-heading"><span class="metric-icon purple-icon">◉</span><span class="metric-change positive">+2.8%</span></div><p>Network coverage</p><strong>18 <span>regions</span></strong><div class="region-dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>Across 4 continents</small></article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel route-panel" id="routes">
+            <div class="panel-heading"><div><p class="panel-kicker">NETWORK VIEW</p><h2>Shipment activity</h2></div><div class="segmented-control"><button class="selected">Week</button><button>Month</button><button>Year</button></div></div>
+            <div class="chart-legend"><span><i class="legend-line teal-line"></i> Delivered</span><span><i class="legend-line gray-line"></i> In transit</span><span class="chart-total">Total <strong>486</strong></span></div>
+            <div class="chart" aria-label="Shipment activity line chart"><div class="y-axis"><span>160</span><span>120</span><span>80</span><span>40</span><span>0</span></div><div class="chart-area"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 720 230" preserveAspectRatio="none" role="img" aria-label="Shipment activity trend"><polyline class="chart-line chart-line-muted" points="0,170 80,145 160,155 240,100 320,130 400,78 480,90 560,48 640,65 720,28"></polyline><polyline class="chart-line chart-line-main" points="0,190 80,160 160,175 240,125 320,150 400,112 480,120 560,85 640,98 720,55"></polyline><circle cx="720" cy="55" r="5" class="chart-point"></circle></svg><div class="x-axis"><span>Sep 01</span><span>Sep 05</span><span>Sep 09</span><span>Sep 13</span><span>Sep 17</span><span>Sep 21</span></div></div></div>
+          </article>
+
+          <article class="panel health-panel" id="fleet">
+            <div class="panel-heading"><div><p class="panel-kicker">FLEET HEALTH</p><h2>Vehicle status</h2></div><a class="text-link" href="#fleet">View fleet <span>→</span></a></div>
+            <div class="donut-wrap"><div class="donut"><div class="donut-center"><strong>86</strong><span>vehicles</span></div></div><div class="health-legend"><span><i class="dot green-dot"></i> In transit <strong>52</strong></span><span><i class="dot blue-dot"></i> Available <strong>24</strong></span><span><i class="dot gray-dot"></i> Maintenance <strong>10</strong></span></div></div>
+            <div class="health-footer"><span>Fleet utilization</span><strong>78.4%</strong><div class="progress-track"><i></i></div></div>
+          </article>
+        </section>
+
+        <section class="lower-grid">
+          <article class="panel shipments-panel" id="shipments">
+            <div class="panel-heading"><div><p class="panel-kicker">LIVE PIPELINE</p><h2>Recent shipments <span class="count-badge">24</span></h2></div><a class="text-link" href="#shipments">View all <span>→</span></a></div>
+            <div class="table-scroll"><table><thead><tr><th>Shipment</th><th>Route</th><th>Status</th><th>ETA</th><th>Carrier</th><th></th></tr></thead><tbody><tr><td><span class="shipment-id"><i class="package-icon">□</i><strong>NS-48291</strong></span><small>Updated 8 min ago</small></td><td><strong>Chicago, IL</strong><span class="route-arrow">→</span><strong>Columbus, OH</strong></td><td><span class="status-pill in-transit"><i></i> In transit</span></td><td><strong>Today, 4:30 PM</strong><small>On schedule</small></td><td><span class="carrier-mark swift-mark">S</span> Swiftline</td><td><a class="row-menu" href="#shipment-menu">•••</a></td></tr><tr><td><span class="shipment-id"><i class="package-icon">□</i><strong>NS-48286</strong></span><small>Updated 24 min ago</small></td><td><strong>Dallas, TX</strong><span class="route-arrow">→</span><strong>Atlanta, GA</strong></td><td><span class="status-pill delayed"><i></i> Delayed</span></td><td><strong>Tomorrow, 9:00 AM</strong><small class="warning-text">+ 2 hours</small></td><td><span class="carrier-mark atlas-mark">A</span> Atlas Freight</td><td><a class="row-menu" href="#shipment-menu">•••</a></td></tr><tr><td><span class="shipment-id"><i class="package-icon">□</i><strong>NS-48273</strong></span><small>Updated 41 min ago</small></td><td><strong>Seattle, WA</strong><span class="route-arrow">→</span><strong>Portland, OR</strong></td><td><span class="status-pill delivered"><i></i> Delivered</span></td><td><strong>Completed</strong><small>Today, 10:42 AM</small></td><td><span class="carrier-mark north-mark">N</span> Northstar Fleet</td><td><a class="row-menu" href="#shipment-menu">•••</a></td></tr></tbody></table></div>
+          </article>
+
+          <aside class="panel alerts-panel">
+            <div class="panel-heading"><div><p class="panel-kicker">ATTENTION NEEDED</p><h2>Exceptions <span class="alert-count">3</span></h2></div><a class="text-link" href="#alerts">All alerts <span>→</span></a></div>
+            <div class="alert-list"><a class="alert-item" href="#alert-1"><span class="alert-symbol red-symbol">!</span><span><strong>Shipment delayed</strong><small>NS-48286 · Dallas → Atlanta</small><time>12 min ago</time></span><span class="alert-arrow">→</span></a><a class="alert-item" href="#alert-2"><span class="alert-symbol orange-symbol">⌁</span><span><strong>Route deviation</strong><small>NS-48192 · Driver check needed</small><time>38 min ago</time></span><span class="alert-arrow">→</span></a><a class="alert-item" href="#alert-3"><span class="alert-symbol blue-symbol">i</span><span><strong>Document required</strong><small>NS-48177 · Customs invoice</small><time>1 hr ago</time></span><span class="alert-arrow">→</span></a></div>
+            <a class="alert-action" href="#alerts">Review all exceptions <span>→</span></a>
+          </aside>
+        </section>
+
+        <footer class="page-footer"><span>Northstar Logistics OS <b>·</b> v2.4.1</span><span><i></i> All systems operational</span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
