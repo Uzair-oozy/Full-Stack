@@ -1,9 +1,4 @@
-/* ========================================
-   FACEBOOK HOMEPAGE — CSS
-   Pure HTML & CSS recreation
-   ======================================== */
 
-/* ===== RESET & BASE ===== */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -68,7 +63,6 @@ img {
     max-width: 100%;
 }
 
-/* ===== AVATARS ===== */
 .avatar {
     background-size: cover;
     background-position: center;
@@ -100,7 +94,6 @@ img {
     color: var(--text-secondary);
 }
 
-/* ===== HEADER ===== */
 .header {
     position: fixed;
     top: 0;
@@ -163,7 +156,6 @@ img {
     box-shadow: 0 0 0 2px var(--fb-blue);
 }
 
-/* ===== HEADER CENTER NAV ===== */
 .header__center {
     display: flex;
     align-items: center;
@@ -230,7 +222,6 @@ img {
     opacity: 1;
 }
 
-/* ===== HEADER RIGHT ===== */
 .header__right {
     display: flex;
     align-items: center;
@@ -262,7 +253,6 @@ img {
     background: transparent;
 }
 
-/* ===== MAIN LAYOUT ===== */
 .main-content {
     display: flex;
     justify-content: center;
@@ -272,7 +262,6 @@ img {
     gap: 0;
 }
 
-/* ===== SIDEBARS ===== */
 .sidebar {
     position: sticky;
     top: calc(var(--header-height) + 16px);
@@ -298,7 +287,6 @@ img {
     padding-right: 16px;
 }
 
-/* ===== LEFT SIDEBAR ITEMS ===== */
 .sidebar-item {
     display: flex;
     align-items: center;
@@ -343,7 +331,6 @@ img {
     padding: 8px 8px 4px;
 }
 
-/* ===== FEED ===== */
 .feed {
     width: 100%;
     max-width: 680px;
@@ -351,7 +338,6 @@ img {
     flex-shrink: 0;
 }
 
-/* ===== STORIES ===== */
 .stories {
     display: flex;
     gap: 8px;
@@ -418,7 +404,6 @@ img {
     line-height: 1.2;
 }
 
-/* Create Story */
 .story--create .story__image {
     height: 70%;
 }
@@ -459,7 +444,6 @@ img {
     bottom: 12px;
 }
 
-/* ===== CARD BASE ===== */
 .card {
     background: var(--bg-white);
     border-radius: var(--radius-lg);
@@ -467,7 +451,6 @@ img {
     margin-bottom: 16px;
 }
 
-/* ===== POST COMPOSER ===== */
 .composer__top {
     display: flex;
     align-items: center;
@@ -523,7 +506,6 @@ img {
     background: var(--bg-hover);
 }
 
-/* ===== POSTS ===== */
 .post__header {
     display: flex;
     align-items: center;
@@ -603,7 +585,6 @@ img {
     opacity: 0.95;
 }
 
-/* Post Stats */
 .post__stats {
     display: flex;
     align-items: center;
@@ -665,7 +646,6 @@ img {
     margin: 10px 16px 0;
 }
 
-/* Post Action Buttons */
 .post__actions {
     display: flex;
     padding: 4px 16px;
@@ -693,7 +673,6 @@ img {
     color: var(--fb-blue);
 }
 
-/* ===== RIGHT SIDEBAR ===== */
 .right-section {
     padding: 4px 0;
 }
@@ -711,7 +690,6 @@ img {
     margin: 8px 8px;
 }
 
-/* Sponsored */
 .sponsored-item {
     display: flex;
     align-items: center;
@@ -752,7 +730,6 @@ img {
     margin-top: 2px;
 }
 
-/* Birthday */
 .birthday-item {
     display: flex;
     align-items: center;
@@ -763,7 +740,6 @@ img {
     line-height: 1.4;
 }
 
-/* Contacts */
 .contacts-header {
     display: flex;
     align-items: center;
@@ -826,7 +802,6 @@ img {
     border: 2px solid var(--bg-white);
 }
 
-/* ===== SCROLLBAR STYLING ===== */
 .sidebar::-webkit-scrollbar {
     width: 8px;
 }
@@ -844,7 +819,6 @@ img {
     background: var(--bg-hover);
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 1400px) {
     .sidebar--right {
         width: 300px;
@@ -939,7 +913,6 @@ img {
     }
 }
 
-/* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
