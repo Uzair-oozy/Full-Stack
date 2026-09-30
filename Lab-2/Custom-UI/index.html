@@ -5,92 +5,358 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Northstar Logistics operations dashboard.">
   <title>Northstar Logistics | Operations</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <a class="brand" href="#overview" aria-label="Northstar Logistics home">
-        <span class="brand-icon">N</span>
-        <span><strong>northstar</strong><small>logistics / ops</small></span>
-      </a>
+<body class="bg-body-tertiary text-dark">
+  <div class="container-fluid p-0">
+    <div class="row g-0 min-vh-100">
+      <aside class="col-lg-3 col-xl-2 bg-dark text-light p-3 d-flex flex-column">
+        <a class="d-flex align-items-center gap-2 text-decoration-none text-white mb-4 px-2" href="#overview" aria-label="Northstar Logistics home">
+          <span class="d-inline-flex align-items-center justify-content-center rounded-2 bg-info text-dark fw-bold" style="width: 32px; height: 32px; transform: rotate(-8deg);">N</span>
+          <span>
+            <strong class="d-block fs-5 fw-bold lh-1">northstar</strong>
+            <small class="d-block text-secondary text-uppercase">logistics / ops</small>
+          </span>
+        </a>
 
-      <div class="workspace-switcher">
-        <span class="workspace-avatar">AC</span>
-        <span><strong>ACME Retail</strong><small>Global account</small></span>
-        <span class="chevron">⌄</span>
-      </div>
+        <div class="d-flex align-items-center gap-2 bg-secondary bg-opacity-10 border border-secondary border-opacity-25 rounded p-2 mb-4">
+          <span class="d-inline-flex align-items-center justify-content-center bg-warning text-dark rounded-circle fw-bold" style="width: 31px; height: 31px; font-size: 10px;">AC</span>
+          <span class="flex-grow-1">
+            <strong class="d-block small">ACME Retail</strong>
+            <small class="d-block text-secondary">Global account</small>
+          </span>
+          <span class="text-secondary">⌄</span>
+        </div>
 
-      <nav class="main-nav" aria-label="Main navigation">
-        <p class="nav-label">Workspace</p>
-        <a class="nav-link active" href="#overview"><span class="nav-icon">◈</span> Overview <b>⌘1</b></a>
-        <a class="nav-link" href="#shipments"><span class="nav-icon">▣</span> Shipments <b>24</b></a>
-        <a class="nav-link" href="#routes"><span class="nav-icon">⌁</span> Routes <b></b></a>
-        <a class="nav-link" href="#fleet"><span class="nav-icon">▤</span> Fleet <b></b></a>
-        <a class="nav-link" href="#reports"><span class="nav-icon">▥</span> Reports <b></b></a>
-        <p class="nav-label secondary-label">Manage</p>
-        <a class="nav-link" href="#customers"><span class="nav-icon">◎</span> Customers <b></b></a>
-        <a class="nav-link" href="#settings"><span class="nav-icon">⚙</span> Settings <b></b></a>
-      </nav>
+        <nav class="nav nav-pills flex-column gap-1" aria-label="Main navigation">
+          <p class="text-uppercase small text-secondary px-2 mb-2 mt-1">Workspace</p>
+          <a class="nav-link active rounded-2 text-white d-flex align-items-center justify-content-between" href="#overview"><span class="d-inline-flex align-items-center gap-2"><span>◈</span> Overview</span><b class="text-secondary small">⌘1</b></a>
+          <a class="nav-link text-secondary rounded-2 d-flex align-items-center justify-content-between" href="#shipments"><span class="d-inline-flex align-items-center gap-2"><span>▣</span> Shipments</span><b class="text-secondary small">24</b></a>
+          <a class="nav-link text-secondary rounded-2 d-flex align-items-center justify-content-between" href="#routes"><span class="d-inline-flex align-items-center gap-2"><span>⌁</span> Routes</span></a>
+          <a class="nav-link text-secondary rounded-2 d-flex align-items-center justify-content-between" href="#fleet"><span class="d-inline-flex align-items-center gap-2"><span>▤</span> Fleet</span></a>
+          <a class="nav-link text-secondary rounded-2 d-flex align-items-center justify-content-between" href="#reports"><span class="d-inline-flex align-items-center gap-2"><span>▥</span> Reports</span></a>
+          <p class="text-uppercase small text-secondary px-2 mb-2 mt-4">Manage</p>
+          <a class="nav-link text-secondary rounded-2 d-flex align-items-center justify-content-between" href="#customers"><span class="d-inline-flex align-items-center gap-2"><span>◎</span> Customers</span></a>
+          <a class="nav-link text-secondary rounded-2 d-flex align-items-center justify-content-between" href="#settings"><span class="d-inline-flex align-items-center gap-2"><span>⚙</span> Settings</span></a>
+        </nav>
 
-      <div class="sidebar-footer">
-        <div class="support-card"><span class="support-pulse"></span><div><strong>Control tower online</strong><small>All systems operational</small></div></div>
-        <a class="profile-link" href="#profile"><span class="profile-avatar">OUK</span><span><strong>Obiad Ullah Khan</strong><small>Operations lead</small></span><span class="more">•••</span></a>
-      </div>
-    </aside>
+        <div class="mt-auto pt-4">
+          <div class="d-flex align-items-center gap-2 border-top border-bottom border-secondary border-opacity-25 py-3 mb-3 text-light">
+            <span class="d-inline-block rounded-circle bg-success" style="width: 8px; height: 8px;"></span>
+            <div>
+              <strong class="d-block small">Control tower online</strong>
+              <small class="d-block text-secondary">All systems operational</small>
+            </div>
+          </div>
 
-    <main class="main-content" id="overview">
-      <header class="topbar">
-        <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong>Overview</strong></div>
-        <div class="topbar-actions"><span class="sync-status"><i></i> Synced 2 min ago</span><button class="icon-button" aria-label="Notifications">♧<em>3</em></button><button class="profile-mini" aria-label="Open profile">OUK</button></div>
-      </header>
+          <a class="d-flex align-items-center gap-2 text-decoration-none text-light rounded-2 p-2" href="#profile">
+            <span class="d-inline-flex align-items-center justify-content-center bg-warning text-dark rounded-circle fw-bold" style="width: 32px; height: 32px; font-size: 10px;">OUK</span>
+            <span class="flex-grow-1">
+              <strong class="d-block small">Obiad Ullah Khan</strong>
+              <small class="d-block text-secondary">Operations lead</small>
+            </span>
+            <span class="text-secondary">•••</span>
+          </a>
+        </div>
+      </aside>
 
-      <div class="content-wrap">
-        <section class="welcome-row">
-          <div><p class="section-kicker">TUESDAY, 23 SEPTEMBER 2026</p><h1>Good morning, Mr. Obiad <span>✦</span></h1><p class="page-intro">Here is the pulse of your network. You have <strong>3 shipments</strong> that need attention today.</p></div>
-          <div class="header-buttons"><a class="button secondary-button" href="#reports"><span>↓</span> Export report</a><a class="button primary-button" href="#new-shipment"><span>+</span> New shipment</a></div>
-        </section>
+      <main class="col-lg-9 col-xl-10 bg-body-tertiary" id="overview">
+        <header class="d-flex align-items-center justify-content-between bg-white border-bottom px-4 py-3">
+          <div class="d-flex align-items-center gap-2 small text-secondary">
+            <span>Workspace</span>
+            <b class="text-body-tertiary">/</b>
+            <strong class="text-dark">Overview</strong>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <span class="d-inline-flex align-items-center gap-2 small text-secondary text-uppercase">
+              <span class="d-inline-block rounded-circle bg-success" style="width: 7px; height: 7px;"></span>
+              Synced 2 min ago
+            </span>
+            <button class="btn btn-link text-secondary p-0 position-relative" aria-label="Notifications">♧<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 7px;">3</span></button>
+            <button class="btn btn-dark btn-sm rounded-circle px-2 py-1" aria-label="Open profile">OUK</button>
+          </div>
+        </header>
 
-        <section class="metric-grid" aria-label="Network summary">
-          <article class="metric-card metric-highlight"><div class="metric-heading"><span class="metric-icon">↗</span><span class="metric-change positive">+8.2%</span></div><p>On-time delivery</p><strong>94.8<span>%</span></strong><div class="sparkline"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>vs. 92.1% last month</small></article>
-          <article class="metric-card"><div class="metric-heading"><span class="metric-icon blue-icon">◫</span><span class="metric-change positive">+12.4%</span></div><p>Active shipments</p><strong>128</strong><div class="metric-bar"><i style="width: 72%"></i></div><small>92 in transit · 36 processing</small></article>
-          <article class="metric-card"><div class="metric-heading"><span class="metric-icon orange-icon">◷</span><span class="metric-change negative">-4.1%</span></div><p>Avg. transit time</p><strong>3.6 <span>days</span></strong><div class="metric-bar orange-bar"><i style="width: 58%"></i></div><small>0.4 days faster than target</small></article>
-          <article class="metric-card"><div class="metric-heading"><span class="metric-icon purple-icon">◉</span><span class="metric-change positive">+2.8%</span></div><p>Network coverage</p><strong>18 <span>regions</span></strong><div class="region-dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>Across 4 continents</small></article>
-        </section>
+        <div class="px-3 px-lg-4 py-4">
+          <section class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 mb-4">
+            <div>
+              <p class="text-uppercase small fw-semibold text-info mb-2">Tuesday, 23 September 2026</p>
+              <h1 class="display-6 fw-semibold lh-sm mb-2">Good morning, Mr. Obiad <span class="text-warning">✦</span></h1>
+              <p class="text-secondary mb-0">Here is the pulse of your network. You have <strong class="text-dark">3 shipments</strong> that need attention today.</p>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-outline-secondary btn-sm fw-semibold" href="#reports"><span class="me-1">↓</span> Export report</a>
+              <a class="btn btn-info text-white btn-sm fw-semibold" href="#new-shipment"><span class="me-1">+</span> New shipment</a>
+            </div>
+          </section>
 
-        <section class="dashboard-grid">
-          <article class="panel route-panel" id="routes">
-            <div class="panel-heading"><div><p class="panel-kicker">NETWORK VIEW</p><h2>Shipment activity</h2></div><div class="segmented-control"><button class="selected">Week</button><button>Month</button><button>Year</button></div></div>
-            <div class="chart-legend"><span><i class="legend-line teal-line"></i> Delivered</span><span><i class="legend-line gray-line"></i> In transit</span><span class="chart-total">Total <strong>486</strong></span></div>
-            <div class="chart" aria-label="Shipment activity line chart"><div class="y-axis"><span>160</span><span>120</span><span>80</span><span>40</span><span>0</span></div><div class="chart-area"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 720 230" preserveAspectRatio="none" role="img" aria-label="Shipment activity trend"><polyline class="chart-line chart-line-muted" points="0,170 80,145 160,155 240,100 320,130 400,78 480,90 560,48 640,65 720,28"></polyline><polyline class="chart-line chart-line-main" points="0,190 80,160 160,175 240,125 320,150 400,112 480,120 560,85 640,98 720,55"></polyline><circle cx="720" cy="55" r="5" class="chart-point"></circle></svg><div class="x-axis"><span>Sep 01</span><span>Sep 05</span><span>Sep 09</span><span>Sep 13</span><span>Sep 17</span><span>Sep 21</span></div></div></div>
-          </article>
+          <section class="row g-3 mb-3" aria-label="Network summary">
+            <article class="col-xl-3 col-md-6">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="d-inline-flex align-items-center justify-content-center bg-success-subtle text-success rounded-circle" style="width: 26px; height: 26px;">↗</span>
+                    <span class="badge bg-success-subtle text-success">+8.2%</span>
+                  </div>
+                  <p class="text-secondary small mb-2">On-time delivery</p>
+                  <h2 class="h3 mb-2">94.8<span class="fs-6 text-secondary">%</span></h2>
+                  <div class="d-flex align-items-end gap-1 mt-3" style="height: 24px;">
+                    <span class="flex-fill bg-success rounded-top" style="height: 42%;"></span>
+                    <span class="flex-fill bg-success rounded-top" style="height: 58%;"></span>
+                    <span class="flex-fill bg-success rounded-top" style="height: 48%;"></span>
+                    <span class="flex-fill bg-success rounded-top" style="height: 76%;"></span>
+                    <span class="flex-fill bg-success rounded-top" style="height: 62%;"></span>
+                    <span class="flex-fill bg-success rounded-top" style="height: 82%;"></span>
+                    <span class="flex-fill bg-success rounded-top" style="height: 70%;"></span>
+                    <span class="flex-fill bg-success rounded-top" style="height: 92%;"></span>
+                    <span class="flex-fill bg-success rounded-top" style="height: 82%;"></span>
+                    <span class="flex-fill bg-success rounded-top" style="height: 100%;"></span>
+                  </div>
+                  <small class="text-secondary d-block mt-2">vs. 92.1% last month</small>
+                </div>
+              </div>
+            </article>
 
-          <article class="panel health-panel" id="fleet">
-            <div class="panel-heading"><div><p class="panel-kicker">FLEET HEALTH</p><h2>Vehicle status</h2></div><a class="text-link" href="#fleet">View fleet <span>→</span></a></div>
-            <div class="donut-wrap"><div class="donut"><div class="donut-center"><strong>86</strong><span>vehicles</span></div></div><div class="health-legend"><span><i class="dot green-dot"></i> In transit <strong>52</strong></span><span><i class="dot blue-dot"></i> Available <strong>24</strong></span><span><i class="dot gray-dot"></i> Maintenance <strong>10</strong></span></div></div>
-            <div class="health-footer"><span>Fleet utilization</span><strong>78.4%</strong><div class="progress-track"><i></i></div></div>
-          </article>
-        </section>
+            <article class="col-xl-3 col-md-6">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-circle" style="width: 26px; height: 26px;">◫</span>
+                    <span class="badge bg-success-subtle text-success">+12.4%</span>
+                  </div>
+                  <p class="text-secondary small mb-2">Active shipments</p>
+                  <h2 class="h3 mb-2">128</h2>
+                  <div class="progress mt-3" style="height: 6px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 72%"></div>
+                  </div>
+                  <small class="text-secondary d-block mt-2">92 in transit · 36 processing</small>
+                </div>
+              </div>
+            </article>
 
-        <section class="lower-grid">
-          <article class="panel shipments-panel" id="shipments">
-            <div class="panel-heading"><div><p class="panel-kicker">LIVE PIPELINE</p><h2>Recent shipments <span class="count-badge">24</span></h2></div><a class="text-link" href="#shipments">View all <span>→</span></a></div>
-            <div class="table-scroll"><table><thead><tr><th>Shipment</th><th>Route</th><th>Status</th><th>ETA</th><th>Carrier</th><th></th></tr></thead><tbody><tr><td><span class="shipment-id"><i class="package-icon">□</i><strong>NS-48291</strong></span><small>Updated 8 min ago</small></td><td><strong>Chicago, IL</strong><span class="route-arrow">→</span><strong>Columbus, OH</strong></td><td><span class="status-pill in-transit"><i></i> In transit</span></td><td><strong>Today, 4:30 PM</strong><small>On schedule</small></td><td><span class="carrier-mark swift-mark">S</span> Swiftline</td><td><a class="row-menu" href="#shipment-menu">•••</a></td></tr><tr><td><span class="shipment-id"><i class="package-icon">□</i><strong>NS-48286</strong></span><small>Updated 24 min ago</small></td><td><strong>Dallas, TX</strong><span class="route-arrow">→</span><strong>Atlanta, GA</strong></td><td><span class="status-pill delayed"><i></i> Delayed</span></td><td><strong>Tomorrow, 9:00 AM</strong><small class="warning-text">+ 2 hours</small></td><td><span class="carrier-mark atlas-mark">A</span> Atlas Freight</td><td><a class="row-menu" href="#shipment-menu">•••</a></td></tr><tr><td><span class="shipment-id"><i class="package-icon">□</i><strong>NS-48273</strong></span><small>Updated 41 min ago</small></td><td><strong>Seattle, WA</strong><span class="route-arrow">→</span><strong>Portland, OR</strong></td><td><span class="status-pill delivered"><i></i> Delivered</span></td><td><strong>Completed</strong><small>Today, 10:42 AM</small></td><td><span class="carrier-mark north-mark">N</span> Northstar Fleet</td><td><a class="row-menu" href="#shipment-menu">•••</a></td></tr></tbody></table></div>
-          </article>
+            <article class="col-xl-3 col-md-6">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="d-inline-flex align-items-center justify-content-center bg-warning-subtle text-warning rounded-circle" style="width: 26px; height: 26px;">◷</span>
+                    <span class="badge bg-warning-subtle text-warning">-4.1%</span>
+                  </div>
+                  <p class="text-secondary small mb-2">Avg. transit time</p>
+                  <h2 class="h3 mb-2">3.6 <span class="fs-6 text-secondary">days</span></h2>
+                  <div class="progress mt-3" style="height: 6px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 58%"></div>
+                  </div>
+                  <small class="text-secondary d-block mt-2">0.4 days faster than target</small>
+                </div>
+              </div>
+            </article>
 
-          <aside class="panel alerts-panel">
-            <div class="panel-heading"><div><p class="panel-kicker">ATTENTION NEEDED</p><h2>Exceptions <span class="alert-count">3</span></h2></div><a class="text-link" href="#alerts">All alerts <span>→</span></a></div>
-            <div class="alert-list"><a class="alert-item" href="#alert-1"><span class="alert-symbol red-symbol">!</span><span><strong>Shipment delayed</strong><small>NS-48286 · Dallas → Atlanta</small><time>12 min ago</time></span><span class="alert-arrow">→</span></a><a class="alert-item" href="#alert-2"><span class="alert-symbol orange-symbol">⌁</span><span><strong>Route deviation</strong><small>NS-48192 · Driver check needed</small><time>38 min ago</time></span><span class="alert-arrow">→</span></a><a class="alert-item" href="#alert-3"><span class="alert-symbol blue-symbol">i</span><span><strong>Document required</strong><small>NS-48177 · Customs invoice</small><time>1 hr ago</time></span><span class="alert-arrow">→</span></a></div>
-            <a class="alert-action" href="#alerts">Review all exceptions <span>→</span></a>
-          </aside>
-        </section>
+            <article class="col-xl-3 col-md-6">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="d-inline-flex align-items-center justify-content-center bg-purple-subtle text-purple rounded-circle" style="width: 26px; height: 26px;">◉</span>
+                    <span class="badge bg-success-subtle text-success">+2.8%</span>
+                  </div>
+                  <p class="text-secondary small mb-2">Network coverage</p>
+                  <h2 class="h3 mb-2">18 <span class="fs-6 text-secondary">regions</span></h2>
+                  <div class="d-flex gap-1 mt-3">
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                  </div>
+                  <small class="text-secondary d-block mt-2">Across 4 continents</small>
+                </div>
+              </div>
+            </article>
+          </section>
 
-        <footer class="page-footer"><span>Northstar Logistics OS <b>·</b> v2.4.1</span><span><i></i> All systems operational</span></footer>
-      </div>
-    </main>
+          <section class="row g-3 mb-3">
+            <article class="col-xl-8" id="routes">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                      <p class="text-uppercase small text-secondary mb-1">Network view</p>
+                      <h2 class="h4 mb-0">Shipment activity</h2>
+                    </div>
+                    <div class="btn-group btn-group-sm" role="group">
+                      <button type="button" class="btn btn-light active">Week</button>
+                      <button type="button" class="btn btn-light">Month</button>
+                      <button type="button" class="btn btn-light">Year</button>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 small text-secondary mb-3">
+                    <span class="d-inline-flex align-items-center gap-2"><span class="d-inline-block bg-info rounded-pill" style="width: 14px; height: 2px;"></span>Delivered</span>
+                    <span class="d-inline-flex align-items-center gap-2"><span class="d-inline-block bg-secondary rounded-pill" style="width: 14px; height: 2px;"></span>In transit</span>
+                    <span class="ms-auto fw-semibold text-dark">Total <strong>486</strong></span>
+                  </div>
+                  <div class="position-relative border rounded p-3 bg-light-subtle" style="height: 240px;">
+                    <div class="position-absolute top-0 bottom-0 start-0 d-flex flex-column justify-content-between px-2 py-3 text-secondary small">
+                      <span>160</span><span>120</span><span>80</span><span>40</span><span>0</span>
+                    </div>
+                    <svg viewBox="0 0 720 200" class="w-100 h-100" preserveAspectRatio="none" aria-label="Shipment activity trend">
+                      <polyline points="0,150 80,130 160,140 240,100 320,115 400,70 480,78 560,38 640,55 720,20" fill="none" stroke="#adb5bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                      <polyline points="0,170 80,145 160,160 240,115 320,135 400,98 480,106 560,76 640,90 720,52" fill="none" stroke="#0d6efd" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                    </svg>
+                    <div class="position-absolute bottom-0 start-0 end-0 d-flex justify-content-between px-3 pb-2 small text-secondary">
+                      <span>Sep 01</span><span>Sep 05</span><span>Sep 09</span><span>Sep 13</span><span>Sep 17</span><span>Sep 21</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-xl-4" id="fleet">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                      <p class="text-uppercase small text-secondary mb-1">Fleet health</p>
+                      <h2 class="h4 mb-0">Vehicle status</h2>
+                    </div>
+                    <a class="small text-decoration-none text-info fw-semibold" href="#fleet">View fleet <span>→</span></a>
+                  </div>
+                  <div class="d-flex align-items-center gap-4 my-4">
+                    <div class="position-relative d-flex align-items-center justify-content-center bg-light rounded-circle" style="width: 126px; height: 126px; background: conic-gradient(#198754 0 60%, #0d6efd 60% 88%, #dfe3e8 88% 100%);">
+                      <div class="position-relative d-flex flex-column align-items-center justify-content-center bg-white rounded-circle" style="width: 92px; height: 92px;">
+                        <strong class="h3 mb-0">86</strong>
+                        <span class="small text-secondary">vehicles</span>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center gap-2 mb-2 small text-secondary"><span class="d-inline-block rounded-circle bg-success" style="width: 8px; height: 8px;"></span> In transit <strong class="ms-auto text-dark">52</strong></div>
+                      <div class="d-flex align-items-center gap-2 mb-2 small text-secondary"><span class="d-inline-block rounded-circle bg-primary" style="width: 8px; height: 8px;"></span> Available <strong class="ms-auto text-dark">24</strong></div>
+                      <div class="d-flex align-items-center gap-2 small text-secondary"><span class="d-inline-block rounded-circle bg-secondary" style="width: 8px; height: 8px;"></span> Maintenance <strong class="ms-auto text-dark">10</strong></div>
+                    </div>
+                  </div>
+                  <div class="border-top pt-3">
+                    <div class="d-flex justify-content-between align-items-center small text-secondary mb-2"><span>Fleet utilization</span><strong class="text-success">78.4%</strong></div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 78.4%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="row g-3 mb-3">
+            <article class="col-xl-8" id="shipments">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                      <p class="text-uppercase small text-secondary mb-1">Live pipeline</p>
+                      <h2 class="h4 mb-0">Recent shipments <span class="badge rounded-pill bg-success-subtle text-success ms-2">24</span></h2>
+                    </div>
+                    <a class="small text-decoration-none text-info fw-semibold" href="#shipments">View all <span>→</span></a>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-borderless align-middle small mb-0">
+                      <thead class="text-uppercase text-secondary">
+                        <tr>
+                          <th>Shipment</th>
+                          <th>Route</th>
+                          <th>Status</th>
+                          <th>ETA</th>
+                          <th>Carrier</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><span class="d-flex align-items-center gap-2"><span class="d-inline-flex align-items-center justify-content-center bg-success-subtle text-success rounded" style="width: 17px; height: 17px; font-size: 10px;">□</span><strong>NS-48291</strong></span><small class="text-secondary d-block mt-1">Updated 8 min ago</small></td>
+                          <td><strong>Chicago, IL</strong> <span class="text-secondary mx-2">→</span> <strong>Columbus, OH</strong></td>
+                          <td><span class="badge bg-success-subtle text-success px-2 py-1"><span class="rounded-circle bg-success d-inline-block me-1" style="width: 6px; height: 6px;"></span>In transit</span></td>
+                          <td><strong>Today, 4:30 PM</strong><small class="text-secondary d-block mt-1">On schedule</small></td>
+                          <td><span class="d-inline-flex align-items-center justify-content-center bg-success rounded text-white me-2" style="width: 21px; height: 21px; font-size: 10px; font-weight: 700;">S</span> Swiftline</td>
+                          <td><a class="text-secondary text-decoration-none" href="#shipment-menu">•••</a></td>
+                        </tr>
+                        <tr>
+                          <td><span class="d-flex align-items-center gap-2"><span class="d-inline-flex align-items-center justify-content-center bg-success-subtle text-success rounded" style="width: 17px; height: 17px; font-size: 10px;">□</span><strong>NS-48286</strong></span><small class="text-secondary d-block mt-1">Updated 24 min ago</small></td>
+                          <td><strong>Dallas, TX</strong> <span class="text-secondary mx-2">→</span> <strong>Atlanta, GA</strong></td>
+                          <td><span class="badge bg-warning-subtle text-warning px-2 py-1"><span class="rounded-circle bg-warning d-inline-block me-1" style="width: 6px; height: 6px;"></span>Delayed</span></td>
+                          <td><strong>Tomorrow, 9:00 AM</strong><small class="text-warning d-block mt-1">+ 2 hours</small></td>
+                          <td><span class="d-inline-flex align-items-center justify-content-center bg-warning rounded text-white me-2" style="width: 21px; height: 21px; font-size: 10px; font-weight: 700;">A</span> Atlas Freight</td>
+                          <td><a class="text-secondary text-decoration-none" href="#shipment-menu">•••</a></td>
+                        </tr>
+                        <tr>
+                          <td><span class="d-flex align-items-center gap-2"><span class="d-inline-flex align-items-center justify-content-center bg-success-subtle text-success rounded" style="width: 17px; height: 17px; font-size: 10px;">□</span><strong>NS-48273</strong></span><small class="text-secondary d-block mt-1">Updated 41 min ago</small></td>
+                          <td><strong>Seattle, WA</strong> <span class="text-secondary mx-2">→</span> <strong>Portland, OR</strong></td>
+                          <td><span class="badge bg-primary-subtle text-primary px-2 py-1"><span class="rounded-circle bg-primary d-inline-block me-1" style="width: 6px; height: 6px;"></span>Delivered</span></td>
+                          <td><strong>Completed</strong><small class="text-secondary d-block mt-1">Today, 10:42 AM</small></td>
+                          <td><span class="d-inline-flex align-items-center justify-content-center bg-purple rounded text-white me-2" style="width: 21px; height: 21px; font-size: 10px; font-weight: 700;">N</span> Northstar Fleet</td>
+                          <td><a class="text-secondary text-decoration-none" href="#shipment-menu">•••</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <aside class="col-xl-4" aria-label="Alerts">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                      <p class="text-uppercase small text-secondary mb-1">Attention needed</p>
+                      <h2 class="h4 mb-0">Exceptions <span class="badge rounded-pill bg-warning-subtle text-warning ms-2">3</span></h2>
+                    </div>
+                    <a class="small text-decoration-none text-info fw-semibold" href="#alerts">All alerts <span>→</span></a>
+                  </div>
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action d-flex align-items-start gap-3 px-0 py-3" href="#alert-1">
+                      <span class="d-inline-flex align-items-center justify-content-center bg-danger-subtle text-danger rounded-circle" style="width: 30px; height: 30px; font-weight: 700;">!</span>
+                      <span class="flex-grow-1">
+                        <strong class="d-block small text-dark">Shipment delayed</strong>
+                        <small class="d-block text-secondary">NS-48286 · Dallas → Atlanta</small>
+                        <time class="d-block text-secondary small">12 min ago</time>
+                      </span>
+                      <span class="text-secondary">→</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action d-flex align-items-start gap-3 px-0 py-3" href="#alert-2">
+                      <span class="d-inline-flex align-items-center justify-content-center bg-warning-subtle text-warning rounded-circle" style="width: 30px; height: 30px; font-weight: 700;">⌁</span>
+                      <span class="flex-grow-1">
+                        <strong class="d-block small text-dark">Route deviation</strong>
+                        <small class="d-block text-secondary">NS-48192 · Driver check needed</small>
+                        <time class="d-block text-secondary small">38 min ago</time>
+                      </span>
+                      <span class="text-secondary">→</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action d-flex align-items-start gap-3 px-0 py-3" href="#alert-3">
+                      <span class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-circle" style="width: 30px; height: 30px; font-weight: 700;">i</span>
+                      <span class="flex-grow-1">
+                        <strong class="d-block small text-dark">Document required</strong>
+                        <small class="d-block text-secondary">NS-48177 · Customs invoice</small>
+                        <time class="d-block text-secondary small">1 hr ago</time>
+                      </span>
+                      <span class="text-secondary">→</span>
+                    </a>
+                  </div>
+                  <a class="d-inline-block mt-3 text-decoration-none small fw-semibold text-info" href="#alerts">Review all exceptions <span>→</span></a>
+                </div>
+              </div>
+            </aside>
+          </section>
+
+          <footer class="d-flex flex-column flex-sm-row justify-content-between text-secondary small border-top pt-3 mt-3">
+            <span>Northstar Logistics OS <b class="text-body-tertiary">·</b> v2.4.1</span>
+            <span class="d-inline-flex align-items-center gap-2"><span class="d-inline-block rounded-circle bg-success" style="width: 7px; height: 7px;"></span> All systems operational</span>
+          </footer>
+        </div>
+      </main>
+    </div>
   </div>
 </body>
 </html>
