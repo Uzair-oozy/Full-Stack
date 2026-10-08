@@ -13,3 +13,6 @@ console.log([100, 20, 5, 3].sort((a, b) => a-b));
 // Descending order
 console.log([100, 20, 5, 3].sort((a, b) => b-a));
 
+console.log(...[1,2], ...[3,4]);
+
+console.log([...[1,2], ...[3,4]]);
