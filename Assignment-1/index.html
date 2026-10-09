@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConnecFriend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loginScreen" class="auth-screen">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center">
+          <div class="col-md-8 col-xl-6">
+            <div class="auth-card shadow-lg">
+              <div class="row g-0">
+                <div class="col-lg-6 auth-visual d-none d-lg-block">
+                  <div class="content-wrap">
+                    <span class="chip">Connect • Share • Grow</span>
+                    <h1>Welcome to ConnecFriend</h1>
+                    <p>
+                      Stay in touch with friends, discover new connections, and keep your circle informed.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="login-panel">
+                    <div class="brand-header mb-4">
+                      <div class="brand-icon">C</div>
+                      <div>
+                        <h2>ConnecFriend</h2>
+                      </div>
+                    </div>
+
+                    <h3 class="mb-3">Login</h3>
+                    <p class="text-secondary small mb-4">Access your social network account.</p>
+
+                    <form id="loginForm" novalidate>
+                      <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input id="username" class="form-control" type="text" placeholder="Enter your username" required />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input id="password" class="form-control" type="password" placeholder="Enter your password" required />
+                      </div>
+
+                      <div id="loginError" class="alert alert-danger d-none" role="alert"></div>
+
+                      <button type="submit" class="btn btn-primary w-100 btn-lg">Sign In</button>
+                    </form>
+
+                    <div class="demo-box mt-4">
+                      <p class="mb-2">Demo account</p>
+                      <small>Use any of the sample usernames and password: <strong>123456</strong></small>
+                      <div class="demo-user-list mt-2">
+                        <span>aisha</span>
+                        <span>musa</span>
+                        <span>zara</span>
+                        <span>ali</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="appShell" class="app-shell d-none">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-icon large">C</div>
+          <div>
+            <div class="brand-name">ConnecFriend</div>
+            <small>Social network</small>
+          </div>
+        </div>
+
+        <nav class="main-nav">
+          <button class="nav-btn active" data-view="home">
+            <span>🏠</span> Home
+          </button>
+          <button class="nav-btn" data-view="profile">
+            <span>👤</span> Profile
+          </button>
+          <button class="nav-btn" data-view="friends">
+            <span>👥</span> Friends
+          </button>
+          <button class="nav-btn" data-view="messages">
+            <span>💬</span> Messages
+          </button>
+        </nav>
+
+        <div class="sidebar-card">
+          <p class="label">Latest logins</p>
+          <div id="latestLogins" class="mini-list"></div>
+        </div>
+      </aside>
+
+      <main class="content-area">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Network</p>
+            <h3 id="pageTitle">Home</h3>
+          </div>
+          <div class="topbar-actions">
+            <div class="search-box">
+              <span>🔍</span>
+              <input type="text" placeholder="Search friends" />
+            </div>
+            <button id="logoutBtn" class="btn btn-outline-danger btn-sm">Logout</button>
+          </div>
+        </header>
+
+        <section id="homeView" class="content-view active">
+          <div class="share-box card shadow-sm">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="mb-0">Share an update</h5>
+              </div>
+            </div>
+            <div class="card-body">
+              <form id="shareForm">
+                <textarea id="postText" cols="30" rows="4" class="form-control" placeholder="What would you like to share with your friends?"></textarea>
+                <div class="share-controls mt-3">
+                  <div class="d-flex flex-wrap gap-3 align-items-center">
+                    <label class="form-label mb-0">Audience</label>
+                    <select id="shareAudience" class="form-select w-auto">
+                      <option value="all">All friends</option>
+                      <option value="selected">Selected friends</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Post Update</button>
+                </div>
+
+                <div id="shareFriendList" class="friend-checklist mt-3"></div>
+              </form>
+            </div>
+          </div>
+
+          <div id="feedContainer" class="feed-container"></div>
+        </section>
+
+        <section id="profileView" class="content-view d-none">
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <div class="card profile-card shadow-sm">
+                <div class="card-body text-center">
+                  <img id="profileAvatar" class="profile-avatar" src="" alt="Profile" />
+                  <h3 id="profileName" class="mt-3"></h3>
+                  <p id="profileUsername" class="text-muted mb-3"></p>
+                  <div class="profile-stats row text-center g-2">
+                    <div class="col-4">
+                      <strong id="followersCount">0</strong>
+                      <span>Friends</span>
+                    </div>
+                    <div class="col-4">
+                      <strong id="postsCount">0</strong>
+                      <span>Posts</span>
+                    </div>
+                    <div class="col-4">
+                      <strong id="ratingCount">0</strong>
+                      <span>Score</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5>Profile information</h5>
+                  <div class="row g-3 mt-1">
+                    <div class="col-md-6">
+                      <label class="form-label text-muted">Full name</label>
+                      <p id="profileFullName" class="value-text"></p>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label text-muted">Email</label>
+                      <p id="profileEmail" class="value-text"></p>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label text-muted">Location</label>
+                      <p id="profileLocation" class="value-text"></p>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label text-muted">Occupation</label>
+                      <p id="profileRole" class="value-text"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mt-4 shadow-sm">
+            <div class="card-body">
+              <div class="section-head">
+                <h5>My Friends</h5>
+              </div>
+              <div id="profileFriendsList" class="friend-grid"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="friendsView" class="content-view d-none">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="section-head">
+                    <h5>Your network</h5>
+                  </div>
+                  <div id="friendsList" class="friend-list"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="section-head">
+                    <h5>People you may know</h5>
+                  </div>
+                  <div id="inviteSuggestions" class="suggestion-list"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="messagesView" class="content-view d-none">
+          <div class="card shadow-sm message-panel">
+            <div class="row g-0">
+              <div class="col-md-4 border-end">
+                <div class="chat-list-header">
+                  <h5>Messages</h5>
+                </div>
+                <div id="conversationList" class="conversation-list"></div>
+              </div>
+              <div class="col-md-8">
+                <div class="chat-window">
+                  <div id="chatHeader" class="chat-header"></div>
+                  <div id="chatMessages" class="chat-messages"></div>
+                  <form id="messageForm" class="chat-input">
+                    <input id="messageInput" type="text" class="form-control" placeholder="Write a private message..." />
+                    <button type="submit" class="btn btn-primary">Send</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
